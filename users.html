@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>All Users</title>
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container text-center">
+<div>
+<form th:actions="@{/Logout}" method="post">
+<p>
+welcome <b>[[${#request.userPrincipal.principal.fullName}]]</b>
+</p>
+<input type="submit" value="Sign out" />
+</form>
+</div>
+<!-- <div><h1>List of All Users</h1></div> -->
+<div>
+
+</div>
+</div>
+<p><h2>Four Steps to be Completed :</h2></p>
+<h3><a th:href="@{/UserProfile}">UserProfile</a></h3>
+<h3><a th:href="@{/Business Plan}">Business Plan</a></h3>
+<h3><a th:href="@{/Investment Plan}">Investment Plan</a></h3>
+<h3><a th:href="@{/Choose Investor}">Choose Investor</a></h3>
+</body>
+</html>
